@@ -1,0 +1,24 @@
+{
+  "name": "JTUtils",
+  "version": "0.1.0",
+  "summary": "Some useful code for myself.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/tjcjc/JTUtils",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "tjcjc": "taijcjc@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/tjcjc/JTUtils.git",
+    "tag": "0.1.0"
+  },
+  "swift_versions": "5.0",
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "JTUtils/Classes/**/*",
+  "swift_version": "5.0"
+}

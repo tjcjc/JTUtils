@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import JTUtils
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let data = Data()
+        print(data.bytes)
     }
 
     override func didReceiveMemoryWarning() {

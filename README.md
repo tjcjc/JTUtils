@@ -22,7 +22,7 @@ pod 'JTUtils'
 
 ## Author
 
-tjcjc, tjcjc@qq.com
+tjcjc, taijcjc@gmail.com
 
 ## License
 
