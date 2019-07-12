@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension FixedWidthInteger {
+public extension FixedWidthInteger {
     func data(isBigEndian: Bool = false) -> Data {
         var unsafe = isBigEndian ? self.bigEndian : self.littleEndian
         return Data(buffer: UnsafeBufferPointer(start: &unsafe, count: 1))
