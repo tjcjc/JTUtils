@@ -11,8 +11,6 @@ public extension Data {
         return self[self.index(self.startIndex, offsetBy: start) ..< self.index(self.startIndex, offsetBy: start + length)]
     }
 
-
-    
     /// read a Number from Data
     ///
     /// - Parameters:
