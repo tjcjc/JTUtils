@@ -17,7 +17,7 @@ class TableOfContentsSpec: QuickSpec {
             }
 
             it("will eventually fail") {
-                expect("time").toEventually( equal("time") )
+                expect("error").toEventually( equal("time") )
             }
             
             context("these will pass") {
