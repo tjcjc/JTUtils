@@ -15,9 +15,19 @@ Install _fastlane_ using
 or alternatively using `brew cask install fastlane`
 
 # Available Actions
+### ci_test
+```
+fastlane ci_test
+```
+
 ### lint
 ```
 fastlane lint
+```
+
+### test
+```
+fastlane test
 ```
 
 
