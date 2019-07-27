@@ -1,6 +1,6 @@
 lane :ci_test do
-    lint
     test
+    lint
 end
 
 lane :lint do
