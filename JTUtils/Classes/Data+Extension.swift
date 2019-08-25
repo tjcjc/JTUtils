@@ -40,7 +40,7 @@ public extension Data {
         }
     }
 
-    var bytes: [UInt8] {
+    var jtBytes: [UInt8] {
         return self.map { UInt8($0) }
     }
 }

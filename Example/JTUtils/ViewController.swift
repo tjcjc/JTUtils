@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let data = Data()
-        print(data.bytes)
+        print(data.jtBytes)
     }
 
     override func didReceiveMemoryWarning() {
