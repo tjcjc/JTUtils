@@ -18,7 +18,7 @@ public extension Data {
     ///   - isLittleEndian: Mac use big Endian default
     /// - Returns: FixedWidthInteger
     func readNum<T: FixedWidthInteger>(index: Int = 0, isLittleEndian: Bool = false) -> T {
-        let len = T.bitWidth / 8
+        let len = T.byteWidth
         let data = self.subData(index, length: len)
         // TODO: withUnsafeBytes is deprecated
         // waiting for another solution
