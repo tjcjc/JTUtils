@@ -17,18 +17,8 @@ public extension Data {
     ///   - index: read index offset the start index
     ///   - isLittleEndian: Mac use big Endian default
     /// - Returns: FixedWidthInteger
-    func readCount<T: FixedWidthInteger>(index: Int = 0, isLittleEndian: Bool = false) -> T {
-        var len = 1
-        switch String(describing: T.self) {
-        case "UInt16":
-            len = 2
-        case "UInt32":
-            len = 4
-        case "UInt64":
-            len = 8
-        default:
-            len = 1
-        }
+    func readNum<T: FixedWidthInteger>(index: Int = 0, isLittleEndian: Bool = false) -> T {
+        let len = T.bitWidth / 8
         let data = self.subData(index, length: len)
         // TODO: withUnsafeBytes is deprecated
         // waiting for another solution
