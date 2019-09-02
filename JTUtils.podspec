@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'JTUtils'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'Some useful code for myself.'
 
 # This description is used to generate tags and improve search results.
