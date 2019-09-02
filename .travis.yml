@@ -10,19 +10,20 @@ language: objective-c
 # xcode_scheme: platform=iOS Simulator,name=iPhone Xʀ,OS=13.0
 
 # cache: cocoapods
-podfile: Example/Podfile
-before_install:
-- gem install cocoapods # Since Travis is not always on latest version
-- pod install --project-directory=Example
-- bundle install
-- mkdir -p test_output
-- brew install danger/tap/danger-swift
+# podfile: Example/Podfile
+# before_install:
+# - gem install cocoapods # Since Travis is not always on latest version
+# - pod install --project-directory=Example
+# - bundle install
+# - mkdir -p test_output
 script:
-- danger-swift ci
-- bundle exec fastlane ci_test
-- pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git
-after_success:
-- bash <(curl -s https://codecov.io/bash) -t 92e9812b-4072-4fd4-970b-785aba1aeba9
-notifications:
-  slack: jasontaiworkspace:lMmPD9sNdKpuFERKU0i73cj4
-  email: false
+- echo $TRAVIS_BRANCH
+# - bundle exec fastlane ci_test
+# - pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git
+# after_success:
+# - bash <(curl -s https://codecov.io/bash) -t 92e9812b-4072-4fd4-970b-785aba1aeba9
+# - pod repo add Jason https://github.com/tjcjc/Specs
+# - pod repo push Jason JTUtils.podspec
+# notifications:
+#   slack: jasontaiworkspace:lMmPD9sNdKpuFERKU0i73cj4
+#   email: false
