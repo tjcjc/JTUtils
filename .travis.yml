@@ -22,7 +22,7 @@ script:
 - pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git
 after_success:
 - bash <(curl -s https://codecov.io/bash) -t 92e9812b-4072-4fd4-970b-785aba1aeba9
-- ./travis/publish.sh
+- ./.travis/publish.sh
 notifications:
   slack: jasontaiworkspace:lMmPD9sNdKpuFERKU0i73cj4
   email: false
