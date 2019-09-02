@@ -25,6 +25,7 @@ lane :test do
         # clean(true)
 
         # Enable skip_build to skip debug builds for faster test performance
+        code_coverage: true,
         skip_build: true,
         output_types: "junit",
         output_files: "test.xml",
