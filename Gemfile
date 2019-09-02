@@ -6,3 +6,4 @@ gem "fastlane"
 gem 'danger-swiftlint'
 gem 'danger-junit'
 gem 'danger-xcov'
+gem 'cocoapods'
