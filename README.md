@@ -1,9 +1,7 @@
 # JTUtils
 
 [![CI Status](https://img.shields.io/travis/tjcjc/JTUtils.svg?style=flat)](https://travis-ci.org/tjcjc/JTUtils)
-[![Version](https://img.shields.io/cocoapods/v/JTUtils.svg?style=flat)](https://cocoapods.org/pods/JTUtils)
-[![License](https://img.shields.io/cocoapods/l/JTUtils.svg?style=flat)](https://cocoapods.org/pods/JTUtils)
-[![Platform](https://img.shields.io/cocoapods/p/JTUtils.svg?style=flat)](https://cocoapods.org/pods/JTUtils)
+[![codecov](https://codecov.io/gh/tjcjc/JTUtils/branch/master/graph/badge.svg)](https://codecov.io/gh/tjcjc/JTUtils)
 
 ## Example
 
