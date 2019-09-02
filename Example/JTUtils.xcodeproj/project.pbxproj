@@ -13,8 +13,9 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		607FACEC1AFB9204008FA782 /* DataTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* DataTest.swift */; };
 		B8EF7044FA742EBC8985463B /* Pods_JTUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 853AAD47775C0C2E74B45069 /* Pods_JTUtils_Tests.framework */; };
+		F05134BB231D819500D616B7 /* NumberTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F05134BA231D819500D616B7 /* NumberTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* JTUtils_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JTUtils_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
+		607FACEB1AFB9204008FA782 /* DataTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTest.swift; sourceTree = "<group>"; };
 		6F1A8FFD167169ABAC41B53C /* Pods-JTUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTUtils_Tests.debug.xcconfig"; path = "Target Support Files/Pods-JTUtils_Tests/Pods-JTUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		853AAD47775C0C2E74B45069 /* Pods_JTUtils_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JTUtils_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACDE97ECC0CFD477CC7AEE07 /* JTUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = JTUtils.podspec; path = ../JTUtils.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -47,6 +48,7 @@
 		BD9ED0A54112B36F0EA4AE26 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		CDA95EA26314E8614CE1304E /* Pods-JTUtils_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTUtils_Example.debug.xcconfig"; path = "Target Support Files/Pods-JTUtils_Example/Pods-JTUtils_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		CFE40CAB3892E67278B717C1 /* Pods-JTUtils_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JTUtils_Example.release.xcconfig"; path = "Target Support Files/Pods-JTUtils_Example/Pods-JTUtils_Example.release.xcconfig"; sourceTree = "<group>"; };
+		F05134BA231D819500D616B7 /* NumberTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +117,8 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				607FACEB1AFB9204008FA782 /* DataTest.swift */,
+				F05134BA231D819500D616B7 /* NumberTest.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -372,7 +375,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				F05134BB231D819500D616B7 /* NumberTest.swift in Sources */,
+				607FACEC1AFB9204008FA782 /* DataTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

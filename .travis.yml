@@ -17,19 +17,12 @@ before_install:
 - pod install --project-directory=Example
 - mkdir -p test_output
 script:
-# - bundle exec fastlane ci_test
-# - bundle exec danger
-# - pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git
-- pod repo add Jason https://github.com/tjcjc/Specs --verbose
-- /usr/local/bin/git -C /Users/travis/.cocoapods/repos/Jason remote remove origin
-- /usr/local/bin/git -C /Users/travis/.cocoapods/repos/Jason remote add origin https://tjcjc:$PUBLISH_KEY@github.com/tjcjc/Specs.git
-- /usr/local/bin/git -C /Users/travis/.cocoapods/repos/Jason fetch
-- /usr/local/bin/git -C /Users/travis/.cocoapods/repos/Jason branch --set-upstream-to=origin/master master
-- pod repo push Jason JTUtils.podspec --allow-warnings --verbose
+- bundle exec fastlane ci_test
+- bundle exec danger
+- pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git
 after_success:
-# - bash <(curl -s https://codecov.io/bash) -t 92e9812b-4072-4fd4-970b-785aba1aeba9
-# - pod repo add Jason https://github.com/tjcjc/Specs
-# - pod repo push Jason JTUtils.podspec --allow-warnings
+- bash <(curl -s https://codecov.io/bash) -t 92e9812b-4072-4fd4-970b-785aba1aeba9
+- ./travis/publish.sh
 notifications:
   slack: jasontaiworkspace:lMmPD9sNdKpuFERKU0i73cj4
   email: false

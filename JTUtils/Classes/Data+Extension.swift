@@ -20,7 +20,13 @@ public extension Data {
     func readNum<T: FixedWidthInteger>(index: Int = 0, isLittleEndian: Bool = false) -> T {
         let len = T.byteWidth
         let data = self.subData(index, length: len)
-        let tmpVal: T = data.withUnsafeBytes { $0.load(as: T.self) }
+        let tmpVal: T = data.withUnsafeBytes {
+            if let address = $0.baseAddress {
+                return address.bindMemory(to: T.self, capacity: 1).pointee
+            } else {
+                fatalError("read error from data")
+            }
+        }
         if len > 1 {
             return isLittleEndian ? T(littleEndian: tmpVal) : T(bigEndian: tmpVal)
         } else {

@@ -8,13 +8,13 @@
 import Foundation
 
 public extension FixedWidthInteger {
-    func data(isBigEndian: Bool = false) -> Data {
-        var unsafe = isBigEndian ? self.bigEndian : self.littleEndian
+    func data(isLittleEndian: Bool = false) -> Data {
+        var unsafe = isLittleEndian ? self.littleEndian : self.bigEndian
         return Data(buffer: UnsafeBufferPointer(start: &unsafe, count: 1))
     }
 
-    func bytes(isBigEndian: Bool = false) -> [UInt8] {
-        return self.data(isBigEndian: isBigEndian).jtBytes
+    func bytes(isLittleEndian: Bool = false) -> [UInt8] {
+        return self.data(isLittleEndian: isLittleEndian).jtBytes
     }
 
     static var byteWidth: Int {
