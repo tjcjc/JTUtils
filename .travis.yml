@@ -3,6 +3,7 @@
 # * https://github.com/supermarin/xcpretty#usage
 # * https://jasontaiworkspace.slack.com/apps/A0F81FP4N-travis-ci?next_id=0
 # * https://docs.travis-ci.com/user/tutorial/
+# * DANGER_GITHUB_API_TOKEN
 
 osx_image: xcode11
 language: objective-c
@@ -20,6 +21,8 @@ script:
 # - bundle exec danger
 # - pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git
 - pod repo add Jason https://github.com/tjcjc/Specs
+- /usr/local/bin/git -C /Users/travis/.cocoapods/repos/Jason remote remove origin
+- /usr/local/bin/git -C /Users/travis/.cocoapods/repos/Jason remote add origin https://tjcjc:$PUBLISH_KEY@github.com/tjcjc/Specs.git
 - pod repo push Jason JTUtils.podspec --allow-warnings --verbose
 after_success:
 # - bash <(curl -s https://codecov.io/bash) -t 92e9812b-4072-4fd4-970b-785aba1aeba9
