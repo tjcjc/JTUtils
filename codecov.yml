@@ -1,0 +1,3 @@
+ignore:
+  - Example
+  - JTUtils/Classes/HTMLEntities
