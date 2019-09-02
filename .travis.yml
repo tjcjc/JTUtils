@@ -20,7 +20,7 @@ script:
 # - bundle exec danger
 # - pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git
 - pod repo add Jason https://github.com/tjcjc/Specs
-- pod repo push Jason JTUtils.podspec --allow-warnings
+- pod repo push Jason JTUtils.podspec --allow-warnings --verbose
 after_success:
 # - bash <(curl -s https://codecov.io/bash) -t 92e9812b-4072-4fd4-970b-785aba1aeba9
 # - pod repo add Jason https://github.com/tjcjc/Specs
