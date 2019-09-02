@@ -13,17 +13,18 @@ language: objective-c
 # cache: cocoapods
 podfile: Example/Podfile
 before_install:
-# - bundle install
-# - pod install --project-directory=Example
+- echo $TRAVIS_BRANCH
+- bundle install
+- pod install --project-directory=Example
 - mkdir -p test_output
 script:
-# - bundle exec fastlane ci_test
-# - bundle exec danger
-# - pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git
+- bundle exec fastlane ci_test
+- bundle exec danger
+- pod lib lint --allow-warnings --sources=https://github.com/tjcjc/Specs.git,https://github.com/CocoaPods/Specs.git
+after_success:
+- bash <(curl -s https://codecov.io/bash) -t 92e9812b-4072-4fd4-970b-785aba1aeba9
 - echo $TRAVIS_BRANCH
 - ./.travis/publish.sh
-# after_success:
-# - bash <(curl -s https://codecov.io/bash) -t 92e9812b-4072-4fd4-970b-785aba1aeba9
-# notifications:
-#   slack: jasontaiworkspace:lMmPD9sNdKpuFERKU0i73cj4
-#   email: false
+notifications:
+  slack: jasontaiworkspace:lMmPD9sNdKpuFERKU0i73cj4
+  email: false
