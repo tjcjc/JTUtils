@@ -4,7 +4,7 @@ PODS:
   - FBSnapshotTestCase/Core (2.1.4)
   - FBSnapshotTestCase/SwiftSupport (2.1.4):
     - FBSnapshotTestCase/Core
-  - JTUtils (0.1.0)
+  - JTUtils (0.1.6)
   - Nimble (7.3.4)
   - Nimble-Snapshots (6.3.0):
     - Nimble-Snapshots/Core (= 6.3.0)
@@ -21,7 +21,7 @@ DEPENDENCIES:
   - Quick (~> 1.2.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - FBSnapshotTestCase
     - Nimble
     - Nimble-Snapshots
@@ -33,11 +33,11 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  JTUtils: 470b531b3998b6eba60541b2df7cd09c3cb3b843
+  JTUtils: 9d6ee57e81eec56d04aadc3ea5fa1600ab034228
   Nimble: 051e3d8912d40138fa5591c78594f95fb172af37
   Nimble-Snapshots: f5459b5b091678dc942d03ec4741cacb58ba4a52
   Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
 
-PODFILE CHECKSUM: f6cdf9fa8f74dd680617f2ce2fb2b19dc18fc285
+PODFILE CHECKSUM: 9c85b89d68009a1242bae0103ee7e86857e2aef2
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.8.0.beta.2

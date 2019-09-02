@@ -16,7 +16,7 @@ public extension FixedWidthInteger {
     func bytes(isBigEndian: Bool = false) -> [UInt8] {
         return self.data(isBigEndian: isBigEndian).jtBytes
     }
-    
+
     static var byteWidth: Int {
         return self.bitWidth / 8
     }

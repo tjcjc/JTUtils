@@ -20,9 +20,7 @@ public extension Data {
     func readNum<T: FixedWidthInteger>(index: Int = 0, isLittleEndian: Bool = false) -> T {
         let len = T.byteWidth
         let data = self.subData(index, length: len)
-        // TODO: withUnsafeBytes is deprecated
-        // waiting for another solution
-        let tmpVal: T = data.withUnsafeBytes {  $0.pointee }
+        let tmpVal: T = data.withUnsafeBytes { $0.load(as: T.self) }
         if len > 1 {
             return isLittleEndian ? T(littleEndian: tmpVal) : T(bigEndian: tmpVal)
         } else {

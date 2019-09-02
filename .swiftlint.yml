@@ -7,17 +7,17 @@ disabled_rules:
   - type_body_length
   - force_try
   - force_cast
-  - todo
 
 opt_in_rules:
   - empty_count
   - force_unwrapping
 
 included:
-  - ../JTUtils
+  - JTUtils/Classes
 
 excluded:
-  - Pods
+  - Example/Pods
+  - JTUtils/Classes/HTMLEntities
 
 function_body_length:
   warning: 50
